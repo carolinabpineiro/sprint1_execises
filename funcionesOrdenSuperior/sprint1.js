@@ -169,27 +169,57 @@ function renderTable(beerArray, tableId) {
   // Limpiar el contenido previo de la tabla, si es necesario
   tableBody.innerHTML = '';
 
-  // Crear las filas y celdas de la tabla
+  // Crear el encabezado (thead) de la tabla
+  let thead = document.createElement('thead');
+  let headerRow = document.createElement('tr');
+
+  // Crear las celdas de encabezado
+  let nameHeader = document.createElement('th');
+  nameHeader.textContent = 'Nombre';
+
+  let abvHeader = document.createElement('th');
+  abvHeader.textContent = 'ABV';
+
+  let ibuHeader = document.createElement('th');
+  ibuHeader.textContent = 'IBU';
+
+  // Agregar las celdas de encabezado a la fila de encabezado
+  headerRow.appendChild(nameHeader);
+  headerRow.appendChild(abvHeader);
+  headerRow.appendChild(ibuHeader);
+
+  // Agregar la fila de encabezado al encabezado (thead)
+  thead.appendChild(headerRow);
+
+  // Agregar el encabezado (thead) a la tabla
+  tableBody.appendChild(thead);
+
+  // Crear las filas y celdas de datos de la tabla
+  let tbody = document.createElement('tbody');
   beerArray.forEach(beer => {
     let fila = document.createElement('tr');
 
     let nombreCelda = document.createElement('td');
     nombreCelda.textContent = beer.name;
 
-    let abvCelda= document.createElement('td');
+    let abvCelda = document.createElement('td');
     abvCelda.textContent = beer.abv;
 
     let ibuCelda = document.createElement('td');
     ibuCelda.textContent = beer.ibu;
 
-    // Agregar las celdas a la fila
+    // Agregar las celdas de datos a la fila
     fila.appendChild(nombreCelda);
     fila.appendChild(abvCelda);
     fila.appendChild(ibuCelda);
 
     // Agregar la fila al cuerpo de la tabla
-    tableBody.appendChild(fila);
+    tbody.appendChild(fila);
   });
+
+  // Agregar el cuerpo (tbody) a la tabla
+  tableBody.appendChild(tbody);
 }
+
 
 renderTable(beers, 'beerTable');
