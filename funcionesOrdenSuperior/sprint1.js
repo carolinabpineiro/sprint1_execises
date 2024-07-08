@@ -141,14 +141,14 @@ console.log(filtrarCerveza(beers, 5));
 
 //10. Generar una función que reciba como parámetros un array de cervezas, un nombre de propiedad y un valor booleano. Deberá devolver un nuevo array con 10 cervezas ordenadas por la propiedad ingresada como segundo argumento, en orden ascendente si la tercera es verdadera o descendente si es falsa.
 
-let cervezasOrdenadas = (beers, property, boolean) => {
+let cervezasOrdenadas = (beers, propiedad, boolean) => {
     let ordered = beers
-      .filter((beer) => beer[property])
+      .filter((beer) => beer[propiedad])
       .toSorted((a, b) => {
-        if (a[property] < b[property]) {
+        if (a[propiedad] < b[propiedad]) {
           return -1;
         }
-        else if (a[property] > b[property]) {
+        else if (a[propiedad] > b[propiedad]) {
           return 1;
         }
         return 0;
