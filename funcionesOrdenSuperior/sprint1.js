@@ -171,24 +171,24 @@ function renderTable(beerArray, tableId) {
 
   // Crear las filas y celdas de la tabla
   beerArray.forEach(beer => {
-    let row = document.createElement('tr');
+    let fila = document.createElement('tr');
 
-    let nameCell = document.createElement('td');
-    nameCell.textContent = beer.name;
+    let nombreCelda = document.createElement('td');
+    nombreCelda.textContent = beer.name;
 
-    let abvCell = document.createElement('td');
-    abvCell.textContent = beer.abv;
+    let abvCelda= document.createElement('td');
+    abvCelda.textContent = beer.abv;
 
-    let ibuCell = document.createElement('td');
-    ibuCell.textContent = beer.ibu;
+    let ibuCelda = document.createElement('td');
+    ibuCelda.textContent = beer.ibu;
 
     // Agregar las celdas a la fila
-    row.appendChild(nameCell);
-    row.appendChild(abvCell);
-    row.appendChild(ibuCell);
+    fila.appendChild(nombreCelda);
+    fila.appendChild(abvCelda);
+    fila.appendChild(ibuCelda);
 
     // Agregar la fila al cuerpo de la tabla
-    tableBody.appendChild(row);
+    tableBody.appendChild(fila);
   });
 }
 
