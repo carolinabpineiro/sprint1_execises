@@ -1,0 +1,39 @@
+/* Estilos para la tabla */
+#beerTable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #ddd;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilos para el encabezado de la tabla */
+  #beerTable th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Estilos para las celdas de la tabla */
+  #beerTable td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Estilos para la fila de encabezado */
+  #beerTable thead {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  /* Estilos para la fila de cuerpo */
+  #beerTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para la fila activa (hover) */
+  #beerTable tbody tr:hover {
+    background-color: #ddd;
+  }
+  
